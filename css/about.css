@@ -38,7 +38,7 @@ ul{
     padding-left: 20px;
 }
 .topName{
-    background: url("../img/bg.jpg");
+    background: url("../image/bg.jpg");
     padding: 60px 0;
     /*margin: 0 0 0 0;*/
     /*color: white;*/
@@ -74,7 +74,7 @@ ul{
 
 /*页脚*/
 .footer{
-    background-color: #222222;
+    background-color: #00E3E3;
     border-top:1px solid #ccc;
     padding: 20px;
     text-align: center;

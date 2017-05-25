@@ -1,21 +1,29 @@
 <!DOCTYPE html>
+<!--html5标准网页声明-->
 <html lang="en">
+<!-- English Page：html lang="en"-->
 <head>
+    <!--<meta/>标签中的 content 属性始终要和 name 属性或 http-equiv 属性一起使用。-->
     <meta charset="UTF-8">
+    <!--X-UA-Compatible:IE8-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!--name="viewport"：PC屏幕缩放不变形-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <!--name="viewport"：mobile屏幕缩放不变形-->
+    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <title>成都瞳康科技有限公司</title>
     <!--keywords 浏览器搜索被匹配的关键字-->
     <meta name="keywords" content="成都瞳康科技 瞳康 视力提升 视力恢复 大数据 科技 未来 瞳康 视界" />
-    <meta name="description" content="成都瞳康，国内首家专注缓解视疲劳，恢复视力的领航者！" />
-    <meta name="author" content="fyus"/>
+    <meta name="description" content="瞳康，致力于人类眼健康、专业从事视力提升康复产品研发设计的高新技术企业。" />
+    <meta name="author" content="cdtkkj"/>
+    <!--robots:文件将被检索，且页面上的链接可以被查询；-->
     <meta name="robots" content="all"/>
     <!--css层叠样式-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
 
 
 </head>
@@ -24,11 +32,17 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a href="#" class="navbar-brand logo" >
+
+            <a href="index.html" class="navbar-brand logo" >
                 <!--alt 属性是一个必需的属性，它规定在图像无法显示时的替代文本。-->
-                <img src="image/tk_logo/tk_logo.png" alt="瞳康科技">
+                <img src="image/tk_logo/tk_new_logo.png" alt="瞳康科技">
             </a>
+
+            <div class="navbar-header">
+                <h3>成都瞳康科技有限公司</h3>
+            </div>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <!--<span class="sr-only">切换导航</span>-->
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -39,24 +53,30 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="./index.html" class="glyphicon glyphicon-home"> 首页</a></li>
                 <li><a href="html/about.html" class="glyphicon glyphicon-list"> 简介</a></li>
-                <li ><a href="html/work.html" class="glyphicon glyphicon-fire"> 合作</a></li>
+                <!--<li><a href="html/product.html" class="glyphicon glyphicon-fire"> 产品</a></li>-->
+                <li><a href="html/product.html" class="glyphicon glyphicon-fire"> 产品</a></li>
                 <li><a href="html/join.html" class="glyphicon glyphicon-question-sign"> 加入我们</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<!--轮播-->
+<!--Bootstrap轮播-->
 <div id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
+
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
-        <div class="item active" style="background: #383838">
+        <div class="item active" style="background: #003d79">
             <a href="html/work.html">
-                <img src="image/tk_logo/tk_glasses.png" alt="First slide">
+                <!--<h2>云智能化</h2>-->
+                <!--<p>致力于为企业挖掘数据蕴藏的价值，提升企业经营业绩</p>-->
+                <!--<p><a href="#2">了解更多</a></p>-->
+                <!--点击图片跳转到html页面-->
+                <img src="image/tk_logo/tk_002.png" alt="First slide">
             </a>
         </div>
         <div class="item" style="background: #7277bb">
@@ -70,31 +90,37 @@
             </a>
         </div>
     </div>
-    <!-- 轮播（Carousel）导航 -->
+    <!-- 轮播（Carousel）导航 —— <:向左; >:向右 -->
+    <!--data-slide 接受关键字 prev 或 next，用来改变幻灯片相对于当前位置的位置-->
+    <!--使用 data-slide-to 来向轮播传递一个原始滑动索引，data-slide-to="2"
+    将把滑块移动到一个特定的索引，索引从 0 开始计数。-->
     <a href="#myCarousel" data-slide="prev" class="carousel-control left">
+        <!-- span: 行内元素进行分组 left-->
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     <a href="#myCarousel" data-slide="next" class="carousel-control right">
+        <!--span: 行内元素进行分组 right -->
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 </div>
 <!--内容-->
 <div class="content_1">
     <div class="container">
-        <h2 class="tab-h2"><strong><a href="#">云智能化系统</a></strong>，<strong><a href="#">大数据时代</a></strong>，<strong><a href="#">移动平台</a></strong></h2>
-        <p class="tab-p">引领未来，科技，生活。</p>
+        <h2 class="tab-h2"><strong><a href="#">云智能化系统</a></strong>，<strong><a href="#">大数据时代</a></strong>，<strong><a href="html/download.html">移动平台智能控制</a></strong></h2>
+        <p class="tab-p">安全、稳定、可信赖的大数据云智能系统。</p>
         <div class="row">
             <div class="col-md-6 col">
                 <div class="media">
                     <div class="media-left media-top">
                         <!--<a href="#">-->
-                        <img class="media-object media_img" src="image/icon/icon-30.png" alt="...">
+                        <!--<img class="media-object media_img" src="image/icon/icon-30.png" alt="...">-->
                         <!--</a>-->
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">产品优势</h4>
+                        <a name="1"></a><!--锚点,name 为锚点名，用于快速定位-->
+                        <h2 class="media-heading"><a href="./html/product.html#1"></a>产品原理</h2>
                         <!--<p class="text-muted text_line">假冒山寨，没有实体店，不受政府监管，无法维权。</p>-->
-                        <p><strong>数据采集</strong>，<strong>数据分析</strong>，<strong>数据导入</strong>，<strong>数据挖掘</strong>。</p>
+                        <h3><strong><a href="#" >影像像差优化技术</a></strong>，<strong><a href="#">大数据平台</a></strong>，<strong><a href="#">云计算服务</a></strong>。</h3>
                     </div>
                 </div>
             </div>
@@ -102,13 +128,14 @@
                 <div class="media">
                     <div class="media-left media-top">
                         <!--<a href="#">-->
-                        <img class="media-object media_img" src="image/icon/icon-74.png" alt="...">
+                        <!--<img class="media-object media_img" src="image/icon/icon-74.png" alt="...">-->
                         <!--</a>-->
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">适用人群</h4>
+                        <a name="2"></a>
+                        <h2 class="media-heading">产品优势</h2>
                         <!--<p class="text-muted text_line">虚假图片展示，网络购买，买到后与实物相差巨大</p>-->
-                        <p>用眼过度的手机族，上班族，可以缓解视疲劳；后天近视，以及先天性的近视和远视的人群，尤其是<strong>青少年儿童</strong></p>
+                        <h3><strong> 智能化，基于云计算和大数据平台</strong> <strong> &nbsp; &nbsp; 新视界,“提升视力、解放眼睛”作为企业使命 </strong> <strong> &nbsp; &nbsp; 呵护眼健康</strong></h3>
                     </div>
                 </div>
             </div>
@@ -116,13 +143,14 @@
                 <div class="media">
                     <div class="media-left media-top">
                         <!--<a href="#">-->
-                        <img class="media-object media_img" src="image/icon/icon-26.png" alt="...">
+                        <!--<img class="media-object media_img" src="image/icon/icon-26.png" alt="...">-->
                         <!--</a>-->
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">市场规模</h4>
+                        <a name="3"></a>
+                        <h2 class="media-heading">应用领域</h2>
                         <!--<p class="text-muted text_line">互联网市场火热，但没有类似的产品，或还未壮大</p>-->
-                        <p>顺应一带一路互联网新方向，用<strong><a href="http://baike.baidu.com/link?url=0lWlf_lEF844sNZ7YuXJSFnTchg6KXBxboX_Go3c3qFd7F4QDq7Ie58tWYPFwb51qQP853P6qzYBz77CVfbzHhSOLTbl7LJ_6_C8L5kIFofnsJAzvtwXaPbPlRWZXK1J"> 互联网+</a></strong> 改变<em>视界</em>，为千万近远视人类谋福利</p>
+                        <h3><strong><a href="http://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF&oq=meta%2520keywords&rsv_pq=a8b5ecbb000f9279&rsv_t=f54fQZtgZlXfvHcO4PxcRf6PG0I97H9rXcWHGvcilV7Qp2Pz6DEVEK83MuE&rqlang=cn&rsv_enter=1&inputT=1521&rsv_n=2&rsv_sug3=4&bs=meta%20keywords">一带一路</a></strong>互联网新方向，用<strong><a href="http://baike.baidu.com/link?url=0lWlf_lEF844sNZ7YuXJSFnTchg6KXBxboX_Go3c3qFd7F4QDq7Ie58tWYPFwb51qQP853P6qzYBz77CVfbzHhSOLTbl7LJ_6_C8L5kIFofnsJAzvtwXaPbPlRWZXK1J"> 互联网+</a></strong> 改变<em>视界</em>，为千万近远视人类谋福利</h3>
                     </div>
                 </div>
             </div>
@@ -130,116 +158,126 @@
                 <div class="media">
                     <div class="media-left media-top">
                         <!--<a href="#">-->
-                        <img class="media-object media_img" src="image/icon/icon-07.png" alt="...">
+                        <!--<img class="media-object media_img" src="image/icon/icon-07.png" alt="...">-->
                         <!--</a>-->
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">会员福利</h4>
-                        <!--<p class="text-muted text_line">会员在选购后，只能获得红包，且红包有使用门槛</p>-->
-                        <p>成为会员，免费<em>体验产品</em>。</p>
+                        <a name="4"></a>
+                        <h2 class="media-heading">客户体验</h2>
+                        <h3>客户<strong><a href="#">免费体验</a></strong>产品，父母给孩子<strong>最好的礼物</strong>。</>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="content_2">
-    <div class="container">
-        <div class="row content_Div">
-            <div class="col-md-6 col-sm-6 content_img">
-                <img src="./image/content_2.png" name="img_2" class="content_DivImg content_2Img img-responsive center-block" alt="">
-            </div>
-            <div class="content_text col-md-6 col-sm-6 tab2-text">
-                <h3>在线下单</h3>
-                <p>消费便捷，通过定位查看附近商圈，精准寻找商品</p>
-                <p style="padding-bottom: 40px">强大的线下实体店支持，丰富的商品展示，就近网店下单，依托实体网店拥有良好的售后</p>
-                <img src="./image/content_2-other.png" class="content_DivImg content_3Img img-responsive center-block hidden-xs" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="content_3">
-    <div class="container">
-        <div class="row content_Div">
-            <div class="col-md-6 col-sm-6">
-                <img src="./image/content_3.png" name="img_3" class="content_DivImg content_3Img img-responsive center-block" alt="">
-            </div>
-            <div class="content_text col-md-6 col-sm-6">
-                <h3>品牌商家</h3>
-                <p style="padding-bottom: 20px">平台选择优质商家，严格筛选，保证质量可靠杜绝假冒伪劣，价格优惠且有现金返现</p>
-                <img src="./image/content_3-other.png" class="content_DivImg content_2Img img-responsive center-block hidden-xs" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="content_4">
-    <div class="container">
-        <div class="row content_Div">
-            <div class="col-md-6 col-sm-6 content_img">
-                <img src="./image/content_4.png" name="img_4" class="content_DivImg content_4Img img-responsive center-block" alt="">
-            </div>
-            <div class="content_text col-md-6 col-sm-6 tab2-text">
-                <h3>线下交付</h3>
-                <p>线下交付可以亲自验货，不需担心图片与实物的误差，到店取货付款后可直接带走或让商家送达</p>
-                <img src="./image/content_4-other.png" class="content_DivImg content_3Img img-responsive center-block hidden-xs" alt="">
+<!--<div class="content_2">-->
+    <!--<div class="container">-->
+        <!--<div class="row content_Div">-->
+            <!--<div class="col-md-6 col-sm-6 content_img">-->
+                <!--<img src="./image/content_2.png" name="img_2" class="content_DivImg content_2Img img-responsive center-block" alt="">-->
+            <!--</div>-->
+            <!--<div class="content_text col-md-6 col-sm-6 tab2-text">-->
+                <!--<h3>线下体验</h3>-->
+                <!--<p>消费便捷，通过定位查看附近商圈，精准寻找商品</p>-->
+                <!--<p style="padding-bottom: 40px">强大的线下实体店支持，丰富的商品展示，就近网店下单，依托实体网店拥有良好的售后</p>-->
+                <!--<img src="./image/content_2-other.png" class="content_DivImg content_3Img img-responsive center-block hidden-xs" alt="">-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="content_3">-->
+    <!--<div class="container">-->
+        <!--<div class="row content_Div">-->
+            <!--<div class="col-md-6 col-sm-6">-->
+                <!--<img src="./image/content_3.png" name="img_3" class="content_DivImg content_3Img img-responsive center-block" alt="">-->
+            <!--</div>-->
+            <!--<div class="content_text col-md-6 col-sm-6">-->
+                <!--<h3>品牌商家</h3>-->
+                <!--<p style="padding-bottom: 20px">平台选择优质商家，严格筛选，保证质量可靠杜绝假冒伪劣，价格优惠且有现金返现</p>-->
+                <!--<img src="./image/content_3-other.png" class="content_DivImg content_2Img img-responsive center-block hidden-xs" alt="">-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="content_4">-->
+    <!--<div class="container">-->
+        <!--<div class="row content_Div">-->
+            <!--<div class="col-md-6 col-sm-6 content_img">-->
+                <!--<img src="./image/content_4.png" name="img_4" class="content_DivImg content_4Img img-responsive center-block" alt="">-->
+            <!--</div>-->
+            <!--<div class="content_text col-md-6 col-sm-6 tab2-text">-->
+                <!--<h3>线下交付</h3>-->
+                <!--<p>线下交付可以亲自验货，不需担心图片与实物的误差，到店取货付款后可直接带走或让商家送达</p>-->
+                <!--<img src="./image/content_4-other.png" class="content_DivImg content_3Img img-responsive center-block hidden-xs" alt="">-->
 
-            </div>
-        </div>
-    </div>
-</div>
-<div class="content_5">
-    <div class="container">
-        <div class="row content_Div">
-            <div class="col-md-3 col-sm-3 hidden-xs">
-                <img src="./image/content_5.png" name="img_5" class="content_DivImg content_3Img img-responsive center-block" alt="">
-            </div>
-            <div class="content_text col-md-9 col-sm-9 tab2-text">
-                <img src="" class="content_DivImg content_5Img img-responsive center-block hidden-xs" alt="瞳康科技" style="width: auto;height: auto" >
-                <p>全新<strong>视界</strong>，互联网+新时代，大数据+物联网+移动终端 </p>
-                <p style="padding-bottom: 20px"><strong><a href="index.html">瞳康</a></strong>，国内领先的医疗眼镜公司，未来<strong>视界</strong>引领者！</p>
-                <button onclick="download()" type="button" class="btn btn-success btn-block2">立即体验</button>
-            </div>
-        </div>
-    </div>
-</div>
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="content_5">-->
+    <!--<div class="container">-->
+        <!--<div class="row content_Div">-->
+            <!--<div class="col-md-3 col-sm-3 hidden-xs">-->
+                <!--<img src="./image/content_5.png" name="img_5" class="content_DivImg content_3Img img-responsive center-block" alt="">-->
+            <!--</div>-->
+            <!--<div class="content_text col-md-9 col-sm-9 tab2-text">-->
+                <!--<img src="./image/tk_content_5_ohter.png" class="content_DivImg content_5Img img-responsive center-block hidden-xs" alt="瞳康科技" style="width: auto;height: auto" >-->
+                <!--<p>全新<strong>视界</strong>，互联网+新时代，大数据+物联网+移动终端 </p>-->
+                <!--<p style="padding-bottom: 20px"><strong><a href="index.html">成都瞳康科技</a></strong>，国内领先的医疗眼镜公司，未来<strong>视界</strong>引领者！</p>-->
+                <!--<button onclick="download()" type="button" class="btn btn-success btn-block2">立即体验我的视界</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--固定在底部footer-->
+<!--<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">-->
+    <!--<div class="container-fluid">-->
+
+
 <!--页脚-->
 <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
                 <h4>首页</h4>
-                <p><a class="footer_a" href="index.html">瞳康优势</a></p>
-                <p><a class="footer_a" href="index.html">产品概括</a></p>
-                <p><a class="footer_a" href="html/download.html">产品下载</a></p>
+                <p><a class="footer_a" href="index.html">产品简介</a></p><!--首页做一个锚点定位-->
+                <p><a class="footer_a" href="html/product.html#3">产品体验</a></p>
+                <p><a class="footer_a" href="html/download.html">APP下载</a></p>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
                 <h4>简介</h4>
-                <p><a class="footer_a" href="html/about.html">企业简介</a></p>
-                <p><a class="footer_a" href="html/about.html">企业文化</a></p>
-                <p><a class="footer_a" href="html/about.html">企业愿景</a></p>
+                <p><a class="footer_a" href="html/about.html#tab1">企业简介</a></p>
+                <p><a class="footer_a" href="html/about.html#tab2">企业文化</a></p>
+                <p><a class="footer_a" href="html/about.html#tab3">企业专利</a></p>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
-                <h4>合作</h4>
-                <p><a class="footer_a" href="html/work.html#1">公司战略</a></p>
-                <p><a class="footer_a" href="html/work.html#2">联系我们</a></p>
-                <p><a class="footer_a" href="html/work.html#3">合作行业</a></p>
+                <h4>产品</h4>
+                <p><a class="footer_a" href="html/product.html#1">产品功能</a></p>
+                <p><a class="footer_a" href="html/product.html#2">产品技术</a></p>
+                <p><a class="footer_a" href="html/product.html#3">产品咨询</a></p>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
                 <h4>加入我们</h4>
                 <p><a class="footer_a" href="html/join.html#1">诚聘英才</a></p>
                 <p><a class="footer_a" href="html/join.html#2">薪酬福利</a></p>
-                <p><a class="footer_a" href="html/join.html#3">招聘解答</a></p>
+                <p><a class="footer_a" href="html/join.html#3">联系我们</a></p>
             </div>
         </div>
         <div class="row" style="padding-top: 10px">
-            <p>成都瞳康 版权所有</p>
-            <p>ICP备案许可证：川ICP备16044594号-2</p>
+            <p> Copyright &copy;2017<a href="index.html"> 成都瞳康科技有限公司.</a> All Rights Reserved.</p>
+            <p>ICP备案许可证：蜀ICP备17052094号-1</p>
         </div>
     </div>
 </footer>
 
+
+<!--</nav>-->
+<!-- //因为使用了document，所以js需要放在需要执行的代码下面生效才能生效-->
 <script src="./js/jquery.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.min.js"></script> <!-- Bootstrap 要在 jQuery之后引用，因为Bootstrap依赖于jQuery-->
 <script src="./js/main.js"></script>
+
 </body>
 </html>
