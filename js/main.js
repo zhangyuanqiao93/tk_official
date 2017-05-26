@@ -53,16 +53,16 @@
                 if (intens(prec1, prec2)) {
                     callback(arr[i]);
                     // 加载资源后，删除监测content_imgOK
-                    arr[i].find(".content_DivImg").addClass("content_imgOK")
+                    arr[i].find(".content_DivImg").addClass("content_imgOK");
                     delete arr[i];
                 }
             }
         }
     }
 
-    var contentArray = new Array();
-    $(".content_Div").each(function(i){
-        contentArray[i]= $(".content_Div").eq(i);
+    var contentArray = [];
+    $('.content_Div').each(function(i){
+        contentArray[i]= $('.content_Div').eq(i);
     });
 
     // 检测目标对象是否出现在客户区
@@ -74,6 +74,11 @@
     }
     autocheck();
 
+    /**
+     *
+     * function：window.onscroll，浏览器滚动时执行；
+     * eg:如<div onscroll=“myfunc()”></div>是在div滚动条滚动时触发的。
+     */
     window.onscroll = function(){
         autocheck();
     };

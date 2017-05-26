@@ -15,7 +15,7 @@
     var slider = {
         index: 0,
         len: 189,
-        el: $(".iphoneScroll-wrap"),
+        el: $('.iphoneScroll-wrap'),
         slide: function() {
             var self = this;
             var left = ++self.index * 189;
@@ -42,7 +42,7 @@ var downloadAPP = function () {
 var scanQRQ = function () {
     alert("开始扫描二维码！");
     console.log("开始扫描二维码");
-}
+};
 
 
 

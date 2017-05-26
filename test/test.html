@@ -1,0 +1,24 @@
+<html>
+<script>
+    function watermark(str){
+        var img = document.getElementById("img");
+        var canvas=document.getElementById("cvs");
+        var ctx=canvas.getContext("2d");
+        ctx.drawImage(img,0,0);
+        ctx.font ="20px microsoft yahei";
+        ctx.fillStyle = "rgba(255,255,255,0.5)";
+        ctx.fillText(str,100,100);
+    }
+</script>
+
+<body>
+
+
+<canvas id="cvs" width="1000" height="500" >
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+<img id="img" src="../image/tk_logo/tk_glasses.png" />
+<button onclick="watermark('Hello world')">add watermark</button>
+
+</body>
+</html>
