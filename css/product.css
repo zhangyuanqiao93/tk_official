@@ -196,6 +196,30 @@ body{
     -webkit-transform:rotate3d(1,1,1,0deg);
 }
 
+.logo_img{
+    margin-top: -20px;
+}
+.logo_img li{
+    float: left;
+    width: 20%;
+    cursor: hand;
+}
+.logo_img li img{
+    width: 100%;
+    transform:scale(0.4,0.4);
+    -moz-transform:scale(0.4,0.4);
+    -webkit-transform:scale(0.4,0.4);
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.logo_img img:hover{
+    transform:scale(0.9,0.9);
+    -moz-transform:scale(0.9,0.9);
+    -webkit-transform:scale(0.9,0.9);
+}
+
 .modal_show{
     text-align: center;
 }
