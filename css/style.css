@@ -9,6 +9,8 @@ ul{
     list-style-type:none;
 }
 body{
+
+    /*padding-top: 40px;*/
     /*min-width: 1190px;*/
     /*padding-top: 50px;!*有顶部固定导航条时设置*!*/
     /*padding-bottom: 50px;!*有底部固定导航条时设置*!*/
@@ -19,6 +21,7 @@ body{
 
 /* 小屏幕*/
 @media (max-width: 767px) {
+    /*可以在这设置适配iPad，iPhone等尺寸大小*/
 
 }
 @media (min-width: 768px) {
@@ -55,7 +58,7 @@ body{
         font-size: 24px;
     }
     .content_2  h3,.content_3  h3,.content_4  h3,.content_5  h3{
-        font-size: 28px;
+        font-size: 26px;
     }
 }
 /* 大屏幕*/
@@ -71,6 +74,13 @@ body{
         padding: 50px;
     }
 }
+
+/* nav 导航栏高度适应小屏幕*/
+
+#myNav {
+    /*margin-bottom: 10px;!important;*/
+}
+
 /*导航栏*/
 .logo{
     padding: 0;
@@ -222,7 +232,8 @@ background-color: #0aa2e3;
 /*}*/
 /*页脚*/
 .footer{
-    background-color: #0aa2e3;
+    background-color: #0aa9e3;
+    /*background-color: #0aa2e3;*/
     border-top:1px solid #ccc;
     padding: 20px;
     text-align: center;
