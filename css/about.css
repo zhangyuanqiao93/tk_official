@@ -7,6 +7,31 @@ ul{
     list-style-type:none;
 }
 
+/**
+* By Bridge on 2017/6/5
+*/
+
+/*导航栏字体大小*/
+.nav{
+    font-size: 1.4em;
+}
+
+/*改变导航栏字体的颜色*/
+.navbar-default .navbar-nav li > a >{
+    color: #111bbc;
+}
+
+.navbar-default .navbar-brand{
+    color: #5E5E5E;
+
+    font-size: 1.8em;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus{
+    color: #071b79;
+}
+
 /* 小屏幕*/
 @media (max-width: 330px) {
     /*去掉默认的下划线*/

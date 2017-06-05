@@ -8,9 +8,12 @@
     <!--X-UA-Compatible:IE8-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!--name="viewport"：PC屏幕缩放不变形-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>-->
     <!--name="viewport"：mobile屏幕缩放不变形-->
-    <!--<meta name="viewport" content="target-density dpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <!--适配手机屏幕-->
+    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>成都瞳康科技有限公司</title>
@@ -24,26 +27,31 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!--<link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <!--<script rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>-->
+    <!--//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css-->
+    <!--//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js-->
+
+
 
 
 </head>
 <body>
+
 <!--导航栏-->
 <nav id="myNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
 
-            <a href="index.html" class="navbar-brand logo" >
+            <a href="index.html" class="navbar-brand logo navbar-left" >
                 <!--alt 属性是一个必需的属性，它规定在图像无法显示时的替代文本。-->
                 <img src="image/tk_logo/tk_new_logo.png" alt="瞳康科技">
             </a>
-
-            <div class="navbar-header">
-                <h4>成都瞳康科技有限公司</h4>
-            </div>
+                <a class="navbar-brand" href="#">成都瞳康科技有限公司</a>
             <!--data-toggle：组件执行什么操作(collapse,即折叠)，data-target="#navbar-collapse"，折叠哪一个元素-->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                <!--<span class="sr-only">切换导航</span>-->
+                <span class="sr-only">切换导航</span>
+                <!--折叠元素的三个横线-->
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -53,16 +61,27 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <!--首页头部连接跳转页面-->
             <ul class="nav navbar-nav navbar-right">
+                <!--注意： 在<li/>标签内部"首页"前一个空格-->
                 <li class="active"><a href="./index.html" class="glyphicon glyphicon-home"> 首页</a></li>
                 <li><a href="html/about.html" class="glyphicon glyphicon-list"> 简介</a></li>
-                <li><a href="html/product.html" class="glyphicon glyphicon-eye-open"> 产品</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle glyphicon glyphicon-eye-open" data-toggle="dropdown" role="button"> 产品
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">产品简介</a></li>
+                        <li> <a href="#">产品功能</a></li>
+                        <li> <a href="#">产品技术</a></li>
+                        <li> <a href="#">产品咨询</a></li>
+                    </ul>
+                </li>
                 <li><a href="html/join.html" class="glyphicon glyphicon-question-sign"> 加入我们</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <!--Bootstrap轮播-->
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide" data>
     <ol class="carousel-indicators">
 
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -72,9 +91,7 @@
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
         <div class="item active" style="background: #172679">
-            <a href="html/work.html">
-                <!--<p>致力于为企业挖掘数据蕴藏的价值，提升企业经营业绩</p>-->
-                <!--<p><a href="#2">了解更多</a></p>-->
+            <a href="html/product.html">
                 <!--点击图片跳转到html页面-->
                 <img src="image/tk/tk_bg_01.png" alt="First slide">
             </a>
@@ -108,23 +125,25 @@
 <!--内容-->
 <div class="content_1">
     <div class="container">
-        <h2 class="tab-h2" style="color: #c9c9c9"><strong><a href="#">云智能化系统</a></strong></h2>
-        <p class="tab-p">安全、稳定、可信赖的大数据分析和云智能系统。</p>
+        <h2 class="tab-h2" style="color: #c9c9c9"><strong><a href="#">云智能化系统 —— 云上的视界 </a></strong></h2>
+        <!--<p class="tab-p">云上的视界</p>-->
         <div class="row">
             <div class="col-md-6 col">
                 <div class="media">
-                    <div class="media-left media-top">
+                    <div class="media-right media-top">
                         <a href="#">
-
-                        <img class="media-object media_img img-responsive" src="image/tk/big_data.png" alt="...">
-
+                        <img class="media-object media_img img-responsive" src="image/tk/cloud.jpg" alt="...">
                         </a>
                     </div>
-                    <div class="media-body">
-                        <!--<a name="1"></a>&lt;!&ndash;锚点,name 为锚点名，用于快速定位&ndash;&gt;-->
-                        <!--<h2 ><a href="./html/product.html#1"></a>产品原理</h2>-->
-                        <!--<h3><a href="#" >大脑影像处理能力及可塑性和眼球处理像差</a>，<a href="#">大数据平台</a>，<a href="#">云计算服务</a>。</h3>-->
-                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col" >
+                <div class="media">
+                <div class="media-body">
+                    <a name="1"></a><!--锚点,name 为锚点名，用于快速定位-->
+                    <h2 style="color: #101010"><a href="./html/product.html#1"></a>产品原理</h2>
+                    <h3 style="color: #c3c6c9"><a href="#" >大脑影像处理能力及可塑性和眼球处理像差</a>，<a href="#">大数据分析</a>，<a href="#">云计算服务</a>。</h3>
+                </div>
                 </div>
             </div>
         </div>
@@ -132,8 +151,8 @@
 </div>
 <div class="content_2">
     <div class="container">
-        <h2 class="tab-h2"><a href="#">大数据算法分析</a></h2>
-        <p class="tab-p">安全、稳定、可信赖的大数据云智能系统。</p>
+        <h2 class="tab-h2"><a href="#">大数据算法分析 —— 大数据，大视界</a></h2>
+        <!--<p class="tab-p">大数据，大视界</p>-->
         <div class="row">
             <div class="col-md-6 col">
                 <div class="media">
@@ -142,67 +161,26 @@
                             <img class="media-object media_img img-responsive" src="image/tk/big_data.png" alt="...">
                         </a>
                     </div>
-                    <!--<div class="media-body">-->
-                        <!--<a name="1"></a>&lt;!&ndash;锚点,name 为锚点名，用于快速定位&ndash;&gt;-->
-                        <!--<h2 class="media-heading"><a href="./html/product.html#1"></a>产品原理</h2>-->
-                        <!--&lt;!&ndash;<p class="text-muted text_line">假冒山寨，没有实体店，不受政府监管，无法维权。</p>&ndash;&gt;-->
-                        <!--<h3><strong><a href="#" >大脑影像处理能力及可塑性和眼球处理像差</a></strong>，<strong><a href="#">大数据平台</a></strong>，<strong><a href="#">云计算服务</a></strong>。</h3>-->
-                    <!--</div>-->
                 </div>
             </div>
             <div class="col-md-6 col">
                 <div class="media">
-                    <div class="media-left media-top">
-                        <a href="#">
-
-                            <!--<img class="media-object media_img" src="image/tk_map.png" alt="...">-->
-                        </a>
-                    </div>
-                    <!--<div class="media-body">-->
-                        <!--<a name="2"></a>-->
-                        <!--<h2 class="media-heading">产品优势</h2>-->
-                        <!--&lt;!&ndash;<p class="text-muted text_line">虚假图片展示，网络购买，买到后与实物相差巨大</p>&ndash;&gt;-->
-                        <!--<h3><strong> 智能化，基于云计算和大数据平台</strong> <strong> &nbsp; &nbsp; 新视界,“提升视力、解放眼睛”作为企业使命 </strong> <strong> &nbsp; &nbsp; 呵护眼健康</strong></h3>-->
-                    <!--</div>-->
-                </div>
-            </div>
-            <div class="col-md-6 col">
-                <div class="media">
-                    <div class="media-left media-top">
-                        <!--<a href="#">-->
-                        <!--<img class="media-object media_img" src="image/tk_map.png" alt="...">-->
-                        <!--</a>-->
-                    </div>
                     <div class="media-body">
                         <a name="3"></a>
-                        <h2 class="media-heading">应用领域</h2>
-                        <h3><strong><a href="http://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF&oq=meta%2520keywords&rsv_pq=a8b5ecbb000f9279&rsv_t=f54fQZtgZlXfvHcO4PxcRf6PG0I97H9rXcWHGvcilV7Qp2Pz6DEVEK83MuE&rqlang=cn&rsv_enter=1&inputT=1521&rsv_n=2&rsv_sug3=4&bs=meta%20keywords">一带一路</a></strong>互联网新方向，用<strong><a href="http://baike.baidu.com/link?url=0lWlf_lEF844sNZ7YuXJSFnTchg6KXBxboX_Go3c3qFd7F4QDq7Ie58tWYPFwb51qQP853P6qzYBz77CVfbzHhSOLTbl7LJ_6_C8L5kIFofnsJAzvtwXaPbPlRWZXK1J"> 互联网+</a></strong> 改变<em>视界</em>，为千万近远视人类谋福利</h3>
+                        <h2 >产品由来</h2>
+                        <h3 style="color: #101010"><a href="#">一带一路</a>互联网新方向，用<a href="#"> 互联网+</a> 改变<em>视界</em>，为千万近远视人类谋福利</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col">
-                <div class="media">
-                    <div class="media-left media-top">
-                        <a href="#">
-                            <!--<img class="media-object media_img" src="image/tk_map.png" alt="...">-->
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <a name="4"></a>
-                        <h2 class="media-heading">客户体验</h2>
-                        <h3>客户<strong><a href="#">免费体验</a></strong>产品，关爱眼健康，还你视界幸福。</h3>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
+            </div>
 </div>
 
 <!--移动平台智能控制-->
 <div class="content_3">
     <div class="container">
-        <h2 class="tab-h2"><strong><a href="html/download.html">移动平台智能控制</a></strong></h2>
-        <p class="tab-p">安全、稳定、可信赖的大数据云智能系统。</p>
+        <h2 class="tab-h2"><strong><a href="html/download.html">移动智慧 —— 随时随地 轻松体验</a></strong></h2>
+        <!--<p class="tab-p">随时随地 轻松体验</p>-->
         <div class="row">
             <div class="col-md-6 col">
                 <div class="media">
@@ -211,7 +189,7 @@
                             <!--<img src="image/tk/iphone6s-plus-silver-select-2015.png">-->
                             <!--<h2 class="media-heading"><a href="./html/product.html#1"></a>移动终端平台</h2>-->
                             <!--<img class="media-object media_img"src="image/tk/iphone6s-plus-silver-select-2015.png" alt="...">-->
-                            <img class="media-object media_img img-responsive" src="image/tk/Apple-might-push-iWatch-release-date-to-2015.jpg" alt="...">
+                            <img class="media-object media_img img-responsive" src="image/tk/tablet_-528x351.png" alt="...">
                         </a>
                     </div>
                     <div class="media-body">
@@ -220,7 +198,7 @@
 
                         <!--<img src="image/tk/iphone6s-plus-silver-select-2015.png">-->
                         <a name="1"></a><!--锚点,name 为锚点名，用于快速定位-->
-                        <h2 class="media-heading"><a href="./html/product.html#1"></a>移动终端平台</h2>
+                        <h2 class="media-heading"><a href="./html/product.html"></a>移动终端平台</h2>
                         <!--<h3><strong><a href="#" >大脑影像处理能力及可塑性和眼球处理像差</a></strong>，<strong><a href="#">大数据平台</a></strong>，<strong><a href="#">云计算服务</a></strong>。</h3>-->
                     </div>
                 </div>
@@ -230,7 +208,7 @@
                     <div class="media-left media-top">
                         <a href="#">
                             <!--<img src="image/tk/iphone6s-plus-silver-select-2015.png">-->
-                            <img class="media-object media_img img-responsive" src="image/tk/moto-x-03_1x.png"  alt="...">
+                            <img class="media-object media_img img-responsive" src="image/tk/moto-x-03_1min.png"  alt="...">
                         </a>
                     </div>
                     <!--<div class="media-body">-->
@@ -241,35 +219,14 @@
                     <!--</div>-->
                 </div>
             </div>
-            <div class="col-md-12 col">
-                <div class="media">
-                    <div class="media-left media-top">
-                        <!--<img src="image/tk/iphone6s-plus-silver-select-2015.png">-->
-                        <!--<a href="#">-->
-                        <img class="media-object media_img img-responsive" src="image/tk/best-android-tablets-sony-xperia-z2-tablet_-1054x702.jpg" alt="...">
-                        <!--</a>-->
-                    </div>
-                    <!--<div class="media-body">-->
-                        <!--<a name="3"></a>-->
-                        <!--<h2 class="media-heading">应用领域</h2>-->
-                        <!--<h3><strong><a href="http://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF&oq=meta%2520keywords&rsv_pq=a8b5ecbb000f9279&rsv_t=f54fQZtgZlXfvHcO4PxcRf6PG0I97H9rXcWHGvcilV7Qp2Pz6DEVEK83MuE&rqlang=cn&rsv_enter=1&inputT=1521&rsv_n=2&rsv_sug3=4&bs=meta%20keywords">一带一路</a></strong>互联网新方向，用<strong><a href="http://baike.baidu.com/link?url=0lWlf_lEF844sNZ7YuXJSFnTchg6KXBxboX_Go3c3qFd7F4QDq7Ie58tWYPFwb51qQP853P6qzYBz77CVfbzHhSOLTbl7LJ_6_C8L5kIFofnsJAzvtwXaPbPlRWZXK1J"> 互联网+</a></strong> 改变<em>视界</em>，为千万近远视人类谋福利</h3>-->
-                    <!--</div>-->
-                </div>
-            </div>
             <div class="col-md-6 col">
                 <div class="media">
                     <div class="media-left media-top">
                         <a href="#">
-                            <!--<img src="image/tk/iphone6s-plus-silver-select-2015.png">-->
-                            <!--<img class="media-object media_img" src="image/tk/iwatch-concept-nike.jpg" alt="...">-->
-
+                        <!--<img class="media-object media_img img-responsive" src="image/tk/tablet_-528x351.png" alt="...">-->
                         </a>
                     </div>
-                    <!--<div class="media-body">-->
-                        <!--<a name="4"></a>-->
-                        <!--<h2 class="media-heading">客户体验</h2>-->
-                        <!--<h3>客户<strong><a href="#">免费体验</a></strong>产品，关爱眼健康，还你视界幸福。</h3>-->
-                    <!--</div>-->
+
                 </div>
             </div>
         </div>
@@ -309,7 +266,7 @@
         </div>
         <div class="row" style="padding-top: 10px">
             <p> Copyright &copy;2017<a href="index.html"> 成都瞳康科技有限公司.</a> All Rights Reserved.</p>
-            <p>ICP备案许可证：蜀ICP备17052094号-1</p>
+            <!--<p>ICP备案许可证：蜀ICP备17052094号-1</p>-->
         </div>
     </div>
 </footer>

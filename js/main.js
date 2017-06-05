@@ -89,8 +89,37 @@ $('.carousel-inner').addClass('img-response');
      * function：window.onscroll，浏览器滚动时执行；
      * eg:如<div onscroll=“myfunc()”></div>是在div滚动条滚动时触发的。
      */
+    var temp = -1;   //判断是否是向下滚动，如果是向上就不延迟加载
     window.onscroll = function(){
+
         autocheck();
+        var imgElements  = document.getElementsByTagName('img'); //可返回带有指定标签名img的对象的集合
+        var lazyImgArr =  [];   //var lazyImgArr = new Array();
+        var j = 0;
+        for (var i = 0; i <imgElements.length;i++){
+            console.log("imgElements : " + imgElements.length);
+            if (imgElements[i].className == "lazy"){
+                lazyImgArr[j++] = imgElements[i];
+            }
+        }
+        debugger;
+        //滚动时加载图片
+        var scrollHeight = document.body.scrollTop; //滚动的高度
+        var bodyHeight = document.body.offsetHeight; //body页面区域可见的总高度
+
+        if (temp < scrollHeight){  //如果为true，则表示向上滑动，不执行延迟加载
+            for(var k=0;k<lazyImgArr.length;k++){
+             var imgTop = lazyImgArr[k].offsetTop;  //图片纵坐标
+                if ((imgTop - scrollHeight) <= bodyHeight){
+                    lazyImgArr[k].src = lazyImgArr[k].alt;
+                    lazyImgArr[k].className = 'notlazy'
+                }
+
+            }
+            temp = scrollHeight;
+
+        }
+
     };
 
 })();
@@ -147,7 +176,7 @@ $('.carousel-inner').addClass('img-response');
 
     function tick0() {
         if(window.requestAnimationFrame) {
-            requestAnimationFrame(tick0);
+            // requestAnimationFrame(tick0);
             now0 = Date.now();
             delta0 = now0 - then0;
             if (delta0 > interval0) {
@@ -156,7 +185,7 @@ $('.carousel-inner').addClass('img-response');
                 snum0();
             }
         } else {
-            setTimeout(tick0, interval0);
+            // setTimeout(tick0, interval0);
             snum0();
         }
     }
@@ -185,13 +214,12 @@ $('.carousel-inner').addClass('img-response');
         }
     }
 
-    tick0();
-    tick1();
+    // tick0();
+    // tick1();
 
 }();
 
 var download = function(){
-    // debugger;
     console.log("download");
     window.location.href="./html/download.html";
 };
@@ -200,9 +228,20 @@ var download = function(){
 //获取页面元素
 var myElement = document.querySelector("header");
 // 创建 Headroom 对象，将页面元素传递进去
-var headroom = new Headroom(myElement);
+// var headroom = new Headroom(myElement);
 //初始化
-headroom.init();
+// headroom.init();
+
+
+/* create by TK on 2016/6/2*/
+
+/* 轮播左右滑动焦点事件*/
+$('#myCarousel').on('slide',function () {
+    debugger;
+    console.log("已获得焦点");
+    var carouselData = $(this).data('slide').$active;
+    console.dir(carouselData)
+});
 
 
 
