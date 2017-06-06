@@ -13,7 +13,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>-->
     <!--name="viewport"：mobile屏幕缩放不变形-->
     <!--适配手机屏幕-->
-    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="target-density dpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>成都瞳康科技有限公司</title>
@@ -26,13 +26,6 @@
     <!--css层叠样式-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!--<link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
-    <!--<script rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>-->
-    <!--//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css-->
-    <!--//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js-->
-
-
 
 
 </head>
@@ -63,16 +56,26 @@
             <ul class="nav navbar-nav navbar-right">
                 <!--注意： 在<li/>标签内部"首页"前一个空格-->
                 <li class="active"><a href="./index.html" class="glyphicon glyphicon-home"> 首页</a></li>
-                <li><a href="html/about.html" class="glyphicon glyphicon-list"> 简介</a></li>
+                <li class="dropdown">
+                    <a href="html/about.html" class="glyphicon glyphicon-list dropdown-toggle" data-toggle="dropdown" role="button"> 简介
+                        <!--<b class="caret"></b>-->
+                    </a>
+                <!--<ul class="dropdown-menu">-->
+                    <!--<li> <a href="#"> 企业简介</a></li>-->
+                    <!--<li> <a href="#"> 企业文化</a></li>-->
+                    <!--<li> <a href="#"> 专利技术</a></li>-->
+                <!--</ul>-->
+
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle glyphicon glyphicon-eye-open" data-toggle="dropdown" role="button"> 产品
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li> <a href="#">产品简介</a></li>
-                        <li> <a href="#">产品功能</a></li>
-                        <li> <a href="#">产品技术</a></li>
-                        <li> <a href="#">产品咨询</a></li>
+                        <li> <a href="#"> 产品简介</a></li>
+                        <li> <a href="#"> 产品功能</a></li>
+                        <li> <a href="#"> 产品技术</a></li>
+                        <li> <a href="#"> 产品咨询</a></li>
                     </ul>
                 </li>
                 <li><a href="html/join.html" class="glyphicon glyphicon-question-sign"> 加入我们</a></li>
@@ -81,29 +84,28 @@
     </div>
 </nav>
 <!--Bootstrap轮播-->
-<div id="myCarousel" class="carousel slide" data>
+<div id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
-
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
-        <div class="item active" style="background: #172679">
+        <div class="item active" style="background: whitesmoke">
             <a href="html/product.html">
                 <!--点击图片跳转到html页面-->
-                <img src="image/tk/tk_bg_01.png" alt="First slide">
+                <img src="image/tk/tk_bg_01.png" alt="First slide" title="瞳康改变视界">
             </a>
         </div>
         <div class="item" style="background: #7277bb">
             <a href="html/join.html">
-                <img src="image/tk/tk_bg_002.png" alt="Second slide">
+                <img src="image/tk/tk_bg_002.png" alt="Second slide"  title="瞳康改变视界">
             </a>
         </div>
         <div class="item" style="background: #fbe8c5">
             <a href="html/about.html">
-                <img src="image/tk/tk_bg_03.png" alt="Third slide">
+                <img src="image/tk/tk_bg_03.png" alt="Third slide"  title="瞳康改变视界">
             </a>
         </div>
     </div>
@@ -132,7 +134,7 @@
                 <div class="media">
                     <div class="media-right media-top">
                         <a href="#">
-                        <img class="media-object media_img img-responsive" src="image/tk/cloud.jpg" alt="...">
+                        <img class="media-object media_img img-responsive" src="image/tk/cloud.png" alt="...">
                         </a>
                     </div>
                 </div>
@@ -142,7 +144,7 @@
                 <div class="media-body">
                     <a name="1"></a><!--锚点,name 为锚点名，用于快速定位-->
                     <h2 style="color: #101010"><a href="./html/product.html#1"></a>产品原理</h2>
-                    <h3 style="color: #c3c6c9"><a href="#" >大脑影像处理能力及可塑性和眼球处理像差</a>，<a href="#">大数据分析</a>，<a href="#">云计算服务</a>。</h3>
+                    <h3 style="color: #c3c6c9"> <a href="#"><a href="#" >大脑影像处理能力及可塑性和眼球处理像差</a>，<a href="#">大数据分析</a>，<a href="#">云计算服务</a>。</a></h3>
                 </div>
                 </div>
             </div>
@@ -158,7 +160,7 @@
                 <div class="media">
                     <div class="media-left media-top">
                         <a href="#">
-                            <img class="media-object media_img img-responsive" src="image/tk/big_data.png" alt="...">
+                            <img class="media-object media_img img-responsive" src="image/tk/big_data.jpg" alt="...">
                         </a>
                     </div>
                 </div>
@@ -277,6 +279,7 @@
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script> <!-- Bootstrap 要在 jQuery之后引用，因为Bootstrap依赖于jQuery-->
 <script src="./js/main.js"></script>
+<script src="bootstrap/js/jquery.orbit-1.3.0.js"></script>
 
 </body>
 </html>

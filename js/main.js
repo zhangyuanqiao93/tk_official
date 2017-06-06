@@ -6,7 +6,6 @@
  * js图片自适应大小
  */
 
-// debugger;
 $('.carousel-inner').addClass('img-response');
 
 
@@ -244,4 +243,75 @@ $('#myCarousel').on('slide',function () {
 });
 
 
+/**
+ * Create By Bridge On 2017/6/6
+ */
+
+/**
+ * 鼠标滑过显示菜单事件
+ */
+$(document).ready(function () {
+    /*1.Dom 结构绘制完毕开始执行
+    * 2.可以同时加载多个，而window.onload()只会执行一个(即使有多个)
+    * 3.简化写法 $(function () {  //do something });
+    * */
+});
+
+
+$(function () {
+   $('.dropdown').hover(function () {
+       $('.dropdown-menu').show();
+
+   },function () {
+       $('.dropdown-menu').hide();
+       }
+   )
+});
+
+
+/**
+ * 鼠标获得焦点，显示左右切换轮播图的图标
+ */
+
+$(function () {
+    $('#myCarousel').hover(function () {
+
+        $('.carousel-control').show();
+    },function () {
+        $('.carousel-control').hide();
+    })
+});
+
+
+/**
+ * 轮播图片的自动播放
+ */
+$(function () {
+
+    // $('#myCarousel').carousel({interval:2000});
+
+});
+
+
+$(function() {
+    $(".navbar-nav li").each(function(index) {
+        $(this).click(function() {
+            $("li.active").removeClass("active"); //注意这里
+            $(this).addClass("active"); //注意这里
+            $(".carousel-inner div.active").removeClass("active");
+            $(".carousel-inner div").eq(index).addClass("active");
+        });
+    });
+    window.setInterval(function() {
+        $(".carousel-inner div").each(function(index) {
+            if ($(this).hasClass("active")) {
+                $(".navbar-nav li.active").removeClass("active");
+                $(".navbar-nav li").eq(index).addClass("active");
+            }
+        });
+    }, 3000);
+});
+
+
+// $('');
 
